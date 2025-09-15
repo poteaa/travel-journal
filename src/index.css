@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --light-red: #F55A5A;
+    --white: #FFFFFF;
+    --gray: #918E9B;
+    --light-gray: #F5F5F5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter;
+}
+
+/* general styles */
+
+.bold {
+    font-weight: 700;
+}
+
+.separator {
+    border: 1px solid var(--light-gray);
+    border-left: none;
+}
+
+.container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 1.25em;
+    background: var(--light-red);
+    color: var(--white);
+}
+
+.header__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 0.904rem;
+    font-weight: 500;
+    letter-spacing: -0.075em;
+    margin-left: 0.430em;
+}
+
+.main {
+    margin: 0 2.75em;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding-block: 1.125em;
+}
+
+.card__text-content {
+    font-size: 0.64rem;
+    margin-left: 1.188em;
+}
+
+.card__location {
+    margin-bottom: 0.5em;
+}
+
+.card__location-icon {
+    margin-right: 0.25em;
+}
+
+.card__location--place {
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    margin-right: 0.75em;
+}
+
+.card__location--map {
+    color: var(--gray);
+}
+
+.card__title {
+    font-size: 1.562rem;
+    margin-bottom: 0.8em;
+}
+
+.card__date {
+    margin-bottom: 0.563em; 
+}
+
+.card__description {
+    line-height: 0.96rem;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 950px;
+    }
+    
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    
+    .card {
+        flex: 0 0 45%;
+    }
 }
