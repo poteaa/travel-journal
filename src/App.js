@@ -12,7 +12,7 @@ export default function App() {
                 key={destination.id}
                 item={destination}
             />
-            {index < destination.length - 1 && <hr className="separator" />}
+            {index < destinations.length - 1 && <hr className="separator" />}
         </React.Fragment>
     )
     return (
