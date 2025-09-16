@@ -1,4 +1,4 @@
-export default [
+const destinations = [
     {
         id: 1,
         title: "Mount Fuji",
@@ -59,5 +59,6 @@ export default [
         description: "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality.",
         image: "Geirangerfjord.png"
     }
-    
 ]
+
+export { destinations }

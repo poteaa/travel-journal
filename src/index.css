@@ -2,7 +2,7 @@
     --light-red: #F55A5A;
     --white: #FFFFFF;
     --gray: #918E9B;
-    --light-gray: #F5F5F5;
+    --light-gray: #c3bfbf;
 }
 
 * {
@@ -17,7 +17,8 @@ h1, h2 {
 }
 
 body {
-    font-family: Inter;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding-bottom: 80px; /* Space for fixed footer */
 }
 
 /* general styles */
@@ -33,6 +34,7 @@ body {
 
 .container {
     width: 550px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -40,6 +42,7 @@ body {
     padding: 1.25em;
     background: var(--light-red);
     color: var(--white);
+    margin-bottom: 1.5em;
 }
 
 .header__content {
@@ -49,7 +52,7 @@ body {
 }
 
 .header__title {
-    font-size: 0.904rem;
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: -0.075em;
     margin-left: 0.430em;
@@ -57,6 +60,7 @@ body {
 
 .main {
     margin: 0 2.75em;
+    padding-bottom: 3em; /* Space for fixed footer */
 }
 
 .card {
@@ -66,7 +70,7 @@ body {
 }
 
 .card__text-content {
-    font-size: 0.64rem;
+    font-size: 0.75rem;
     margin-left: 1.188em;
 }
 
@@ -79,40 +83,66 @@ body {
 }
 
 .card__location--place {
+    font-size: 0.8rem;
     letter-spacing: 0.17em;
     text-transform: uppercase;
     margin-right: 0.75em;
 }
 
 .card__location--map {
+    font-size: 0.8rem;
     color: var(--gray);
 }
 
 .card__title {
-    font-size: 1.562rem;
+    font-size: 1.75rem;
     margin-bottom: 0.8em;
 }
 
 .card__date {
+    font-size: 0.9rem;
     margin-bottom: 0.563em; 
 }
 
 .card__description {
-    line-height: 0.96rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 @media (min-width: 1000px) {
     .container {
-        width: 950px;
+        width: 1200px;
     }
     
     .main {
         display: flex;
         flex-wrap: wrap;
-        gap: 1em;
+        justify-content: center;
+        column-gap: 2em;
+        row-gap: 1.5em;
     }
     
     .card {
-        flex: 0 0 45%;
+        flex: 0 0 48%;
     }
+    
+    .separator {
+        display: none;
+    }
+}
+
+/* Footer styles */
+.footer {
+    background: var(--light-gray);
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__text {
+    color: #333;
+    font-size: 0.9rem;
+    margin: 0;
 }

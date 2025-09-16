@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from './components/Header'
 import Card from  './components/Card'
+import Footer from './components/Footer'
 
-import data from './data'
+import { destinations } from './data'
 
 export default function App() {
-    const cards = data.map((d, index) => 
-        <React.Fragment key={d.id}>
+    const cards = destinations.map((destination, index) => 
+        <React.Fragment key={destination.id}>
             <Card
-                key={d.id}
-                item={d}
+                key={destination.id}
+                item={destination}
             />
-            {index < data.length - 1 && <hr className="separator" />}
+            {index < destination.length - 1 && <hr className="separator" />}
         </React.Fragment>
     )
     return (
@@ -22,6 +23,7 @@ export default function App() {
                     {cards}
                 </main>
             </div>
+            <Footer />
         </div>
     )
 }

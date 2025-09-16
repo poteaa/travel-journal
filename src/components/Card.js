@@ -5,12 +5,12 @@ export default function Card({item}) {
     
     return (
         <div className="card">
-            <img src={image} className="card__image" alt={item.title} />
+            <img src={image} className="card__image" alt={`${item.location} travel destination`} />
             <div className="card__text-content">
                 <p className="card__location">
-                    <img src="./images/location-icon.png" className="card__location-icon" />
+                    <img src="/images/location-icon.png" className="card__location-icon" alt="" />
                     <span className="card__location--place">{item.location}</span>
-                    <a href={item.googleMapsUrl} className="card__location--map" target="_blank">View on Google Maps</a>
+                    <a href={item.googleMapsUrl} className="card__location--map" target="_blank" rel="noreferrer">View on Google Maps</a>
                 </p>
                 <h2 className="card__title bold">{item.title}</h2>
                 <p className="card__date bold">{item.startDate} - {item.endDate}</p>
